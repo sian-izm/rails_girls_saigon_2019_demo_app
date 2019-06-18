@@ -23,8 +23,8 @@ https://drive.google.com/file/d/1Z5Rn65_G2Rj-aywNsrlOjGPMmwrmSZYX/view
 ## Dynamic Rails app
 
 - [x] Initialize Rails
-- [ ] Root page
-- [ ] all other pages
+- [x] Root page
+- [x] all other pages
 - [ ] Dinamical
 
 
@@ -92,10 +92,14 @@ class CreateProducts < ActiveRecord::Migration[5.1]
   def change
     create_table :products do |t|
       t.string :name
-
+      t.integer :price
+      t.text :description
       t.timestamps
     end
   end
 end
 
 ```
+- Apply instance variable for controller and view file
+- To upload image, setup Active Storage https://edgeguides.rubyonrails.org/active_storage_overview.html#setup
+
